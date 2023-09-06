@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <title>🌙 SleepyHare ┃ Sleep Cycle Calculator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Mansalva&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div id="left">
+            <!-- pixel to open the left modal -->
+            <div id="left-pixel"><button class="modal-button" href="#left-modal"></button>
+            </div>
+            <div id="left-modal" class="modal">
+                <div class="modal-content">
+                    <div class="modal-header"> <span class="close">×</span>
+                        <h1>About</h1>
+                    </div>
+                    <div class="modal-body">
+                        <p>a theme for people who want an uncluttered layout, but also have a lot to say! check the code for full instructions and notes. <img class="modal-img" src="https://dl.dropbox.com/s/fwtvge3o467bc2v/snoopy1.png">
+                        <ul>
+                            <li>this theme uses CSS variables to control your settings.</li>
+                            <li>the title font supports english and japanese (but not kanji)</li>
+                            <li>the header dimensions are intended for a 4:3 ratio image.</li>
+                            <li>you can use the <code>modal-img</code> class to include right-aligned images in your modals.</li>
+                            <li>this preview does not use captions for the modal icons, but you can add them by searching for <code>caption 1</code> and <code>caption 2</code> and deleting the HTML comment tags (<code><-- --></code>)</li>
+                        </ul> if you have any questions, you can email me at <a href="mailto:nenrikido@pm.me">nenrikido@pm.me</a> <img src="https://dl.dropbox.com/s/gmwv7ibxfjb0ry9/cb2.gif"> </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="outer-box">
+            <div class="inner-box">
+                <h5 class="text">A Sleep Cycle Calculator</h5>
+                <div id="line-break"></div>
+                <p class="inside-text">When do you want to wake up?</p>
+                <div class="time-picker">
+                    <input type="text" class="time-pickable" readonly>
+                </div>
+                <div id="calculate"><button id="calculate-button">Calculate</button></div>
+                <div id="results-container" style="display: none;">
+                    <ul id="results-list">
+                        <div class="result-item"></div>
+                    </ul>
+                </div>
+                
+            </div>
+        </div>
+        <div id="right">
+            <!-- pixel to open the right modal -->
+            <div id="right-pixel"><button class="modal-button" href="#right-modal"></button> 
+            </div> 
+            <div id="right-modal" class="modal">
+                <div class="modal-content">
+                    <div class="modal-header"> <span class="close">×</span>
+                        <h1>The Developer</h1>
+                    </div>
+                    <div class="modal-body">
+                        <p> <img class="modal-img" src="https://dl.dropbox.com/s/82bs65tjlesbjgf/snoopy2.png" alt="A transparent PNG of Snoopy and Woodstock lounging in a watering can with yellow gardening hats."> it takes a village to craft a theme...and all tools used in the creation of this theme are free for public use, so go check them out. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                            aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                            aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                            aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                            aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                            aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                            aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                            aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                            aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                            aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                        <ul>
+                            <li>Body font: <a href="https://nationalparktypeface.com/">National Park</a></li>
+                            <li>Header font: <a href="https://fonts.google.com/specimen/Darumadrop+One">Darumadrop One</a></li>
+                            <li>Cardcaptor Sakura gif: <a href="https://yonkou.tumblr.com/">Yonkou</a></li>
+                            <li>Theme pixels: <a href="https://foollovers.com/mat/i-s-sp02.html">Fool Lovers</a></li>
+                            <li>Background photo: <a href="https://unsplash.com/photos/NMLv5HQZnK4">Mark Tegethoff</a></li>
+                            <li>Modal base code: <a href="https://www.w3schools.com/howto/howto_css_modals.asp">W3 Schools</a></li>
+                            <li>Modal images: my renders of <a href="https://www.re-ment.co.jp/product/r25109">Snoopy's life in a bottle</a> products</li>
+                        </ul>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
