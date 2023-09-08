@@ -23,12 +23,11 @@ body, html {
 	scrollbar-color: var(--accent-color2) var(--accent-color);
 }
 
-/* change highlight text color! */
+/* change highlight text color */
 ::selection {
 	background: var(--accent-color)
 }
 
-/* Reset some default styles */
 body {
     margin: 0;
     padding: 0;
@@ -40,7 +39,6 @@ body {
     background-position: center center;
 }
 
-/* Center the main container */
 .container {
     width: 100%;
     height: 100vh;
@@ -49,32 +47,28 @@ body {
     align-items: center;
 }
 
-/* Style the outer box */
 .outer-box {
-    width: 500px; /* Adjust the width as needed */
-    height: 400px; /* Adjust the height as needed */
-    background-color: var(--outer-box-color); /* Adjust the background color as needed */
-    border-radius: 30px; /* Adjust the border radius as needed */
-    padding: 30px; /* Adjust the padding as needed */
+    width: 500px; 
+    height: 400px; 
+    background-color: var(--outer-box-color); 
+    border-radius: 30px; 
+    padding: 30px; 
     margin-top: 40px;
-    margin-bottom: 0px
+    margin-bottom: 0px;
 }
     
-/* Style the text inside the inner box */
 .inner-box {
     height: 380px;
-    background-color: var(--inner-box-color); /* Adjust the background color as needed */
-    padding: 10px; /* Adjust the padding as needed */
-    border-radius: 30px; /* Adjust the border radius as needed */
+    background-color: var(--inner-box-color);
+    padding: 10px; 
+    border-radius: 30px; 
 
 }
 
-/* Style the text */
 .text {
-    color: var(--text-color); /* Adjust the text color as needed */
-    font-size: 18px; /* Adjust the font size as needed */
+    color: var(--text-color); 
+    font-size: 18px; 
     text-align: center;
-	
 }
 
 .inside-text {
@@ -83,28 +77,62 @@ body {
 	text-align: center;
 }
 
+.line {
+	margin-top: -10px;
+}
+
 #line-break {
     width: 30em;
     height: 1em;
     background: var(--line-break) center / contain no-repeat;
-
 }
 
+/* picking a time */
+.time-picker {
+	position: absolute;
+	display: flex;
+	padding: 10px;
+	background: var(--accent-color3);
+	border-radius: 6px;
+	top: 52%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.time-pickable {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	outline: none;
+	text-align: center;
+	border: 1px solid var(--accent-color2);
+	border-radius: 6px;
+	padding: 6px 10px;
+	background: #fffcfc;
+	cursor: pointer;
+	font-family: var(--body-font);
+	text-transform: uppercase;
+}
+
+/* results */
 #results-container {
-    background-color: #f0f0f0;
     padding: 10px;
-    border-radius: 5px;
+    border-radius: 20px;
     margin-top: 10px;
+	
 }
 
 #results-list {
     list-style-type: none;
     padding: 0;
+	display: flex;
 }
 
 #results-list li {
-    margin: 5px 0;
-    font-size: 16px;
+    margin: 5px 5px;
+    font-size: 20px;
+	font-family: var(--body-font);
+	margin-left: 15px;
 }
 
 @keyframes fadeIn {
@@ -117,9 +145,44 @@ body {
 }
 
 .result-item {
-    animation: fadeIn 0.5s ease-in-out; /* Adjust duration and easing as needed */
+    animation: fadeIn 0.9s ease-in-out;
 }
 
+/* calculate button */
+#calculate {
+	text-align: center;
+	margin-top: 110px;
+}
+
+#calculate-button {
+	background-color: var(--accent-color);
+	text-transform: uppercase;
+	font-family: var(--body-font);
+	font-size: 15px;
+	padding: 7px;
+	border: none;
+	border-radius: 10px;
+	outline: none;
+	-webkit-transition: box-shadow 100ms ease-in-out, background 200ms linear, color 200ms ease-in;
+	-moz-transition: box-shadow 100ms ease-in-out, background 200ms ease-in-out, color 200ms ease-in;
+	transition: box-shadow 100ms ease-in-out, background 200ms ease-in-out, color 200ms ease-in;
+	-webkit-box-shadow: 4px 4px 0px 0px var(--accent-color3);
+  	-moz-box-shadow: 4px 4px 0px 0px var(--accent-color3);
+  	box-shadow: 4px 4px 0px 0px var(--accent-color3);
+  	backface-visibility: hidden;
+  	-webkit-backface-visibility: hidden;
+}
+
+#calculate-button:hover {
+	box-shadow: 0px -1px 0px -1px var(--accent-color3);
+  	border: 2px solid var(--accent-color3);
+  	background: var(--accent-color3);
+  	color: #FFF;
+  	backface-visibility: hidden;
+  	-webkit-backface-visibility: hidden;
+}
+
+/* pixel and modals */
 #right-pixel, #left-pixel {
 	width: 6em;
 	height: 6em;
@@ -242,27 +305,4 @@ body {
 	color: var(--accent-color);
 	text-decoration: none;
 	cursor: pointer;
-}
-
-.time-picker {
-	position: absolute;
-	display: inline-block;
-	padding: 10px;
-	background: var(--accent-color3);
-	border-radius: 6px;
-	margin-left: 150px;
-}
-
-.time-picker__select {
-	-webkit-appearance: none;
-	-moz-appearance: none;
-	appearance: none;
-	outline: none;
-	text-align: center;
-	border: 1px solid var(--accent-color2);
-	border-radius: 6px;
-	padding: 6px 10px;
-	background: #ffffff;
-	cursor: pointer;
-	font-family: 'Heebo', sans-serif;
 }
