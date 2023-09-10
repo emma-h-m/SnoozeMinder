@@ -35,7 +35,6 @@ window.onclick = function(event) {
 }
 
 // time input script
-
 function activate() {
 	document.head.insertAdjacentHTML("beforeend", '');
 
@@ -104,7 +103,7 @@ function buildPicker(timePickable) {
         const selectedTime = getTimeStringFromPicker(picker);
         timePickable.value = selectedTime;
 
-        // Send the selected time to the server
+        // send the selected time to the server
         sendSelectedTimeToServer(selectedTime);
     });
 
@@ -159,7 +158,7 @@ function numberToOption(number) {
 function sendSelectedTimeToServer(selectedTime) {
     console.log('Selected Time:', selectedTime);
 	
-	// Send an HTTP POST request to your server with the selectedTime
+	// send an HTTP POST request to server with the selectedTime
     fetch('/save-time', {
         method: 'POST',
         headers: {
@@ -168,7 +167,7 @@ function sendSelectedTimeToServer(selectedTime) {
         body: JSON.stringify({ selectedTime }),
     })
     .then(response => {
-        // Handle the response from the server if needed
+        // handle the response from the server if needed
     })
     .catch(error => {
         console.error('Error sending selected time:', error);
@@ -181,7 +180,7 @@ document.getElementById("calculate-button").addEventListener("click", calculateR
 function calculateResults() {
     const selectedTime = document.querySelector(".time-pickable").value;
 
-    // Make an AJAX request to your server to get the results
+    // make an AJAX request to your server to get the results
     fetch("/save-time", {
         method: "POST",
         headers: {
@@ -194,20 +193,19 @@ function calculateResults() {
             const resultsContainer = document.getElementById("results-container");
             const resultsList = document.getElementById("results-list");
 
-            // Clear previous results
+            // clear previous results
             resultsList.innerHTML = "";
 
-            // Loop through the results and add them with the animation class
+            // loop through the results and add them with the animation class
             data.results.forEach((result) => {
                 const resultContainer = document.createElement("div");
-                resultContainer.classList.add("result-item"); // Add animation class
+                resultContainer.classList.add("result-item"); 
                 const resultItem = document.createElement("li");
                 resultItem.textContent = result;
                 resultContainer.appendChild(resultItem);
                 resultsList.appendChild(resultContainer);
             });
 
-            // Show the results container
             resultsContainer.style.display = "block";
         })
         .catch((error) => {

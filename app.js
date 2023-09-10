@@ -21,6 +21,7 @@ app.get('', (req, res) => {
     res.render('index')
 })
 
+// call to calculate recommended sleep times according to inputted time
 app.post('/save-time', (req, res) => {
     const selectedTime = req.body.selectedTime;
     console.log('Received Selected Time:', selectedTime);
@@ -36,7 +37,7 @@ app.post('/save-time', (req, res) => {
 
     console.log('Results: ', results);
 
-    // Send the results as JSON
+    // send the results
     res.json({ results });
 });
 

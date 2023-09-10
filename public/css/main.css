@@ -1,5 +1,4 @@
-
-
+/* root for css file */
 :root {
     --header-font: 'Sriracha';
     --body-font: 'Montserrat';
@@ -16,27 +15,14 @@
     --line-break: url('https://64.media.tumblr.com/tumblr_lmzodxZaOI1qg9aa7.gif');
 }
 
-body, html {
-	scroll-behavior: smooth;
-	margin: 0;
-	padding: 0;
-	scrollbar-color: var(--accent-color2) var(--accent-color);
-}
+body, html {scroll-behavior: smooth;margin: 0;padding: 0;scrollbar-color: var(--accent-color2) var(--accent-color);}
+
+body {margin: 0;padding: 0;font-family: var(--body-font);background-image: var(--night-sky);background-size: cover;background-repeat: no-repeat;
+background-attachment: fixed; background-position: center center;}
 
 /* change highlight text color */
 ::selection {
 	background: var(--accent-color)
-}
-
-body {
-    margin: 0;
-    padding: 0;
-    font-family: var(--body-font);
-    background-image: var(--night-sky);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed; 
-    background-position: center center;
 }
 
 #title {
@@ -50,6 +36,7 @@ body {
 	margin-top: 130px;
 }
 
+/* main section after title */
 .container {
     width: 100%;
     height: 100vh;
@@ -77,8 +64,7 @@ body {
 
 }
 
-
-
+/* contents inside box */
 .text {
     color: var(--text-color); 
     font-size: 18px; 
