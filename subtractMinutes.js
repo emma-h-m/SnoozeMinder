@@ -5,7 +5,7 @@ function subtractMinutes(inputTime, minutesToSubtract) {
     const match = inputTime.match(/^(\d{1,2}):(\d{2})\s+(am|pm)$/i);
 
     if (!match) {
-        return "Invalid input format. Please use 'hh:mm am/pm' format.";
+        return "";
     }
 
     const [, hourStr, minuteStr, amPm] = match;
