@@ -7,4 +7,4 @@
 
 Features time select button with calculator that calculates and displays calculated result on selected time input and two side pixel modals with pop up windows.
 
-This was my first venture into creating a proper web app. Possibility for more features in the future.
+I wanted to be able to fully build a web app without following step-by-step tutorials, and I'm pretty proud of the result. Possibility for more features in the future, I would like to add a sleep quality tracker of sorts, and I want to make the knowledge of how sleep cycles work more of an interactive experience.
